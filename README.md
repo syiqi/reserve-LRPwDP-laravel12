@@ -22,6 +22,6 @@ and more in DRL_PPO_Model\requirement.txt
 
 LRPwDP files houses the laravel web application which is used as the reservation platform for sellers to list the perishables and customers to reserve them.
 DRL_PPO_Model files contains the Deep Reinforcement's Proximity Policy Optimization machine learning model which is used to dynamically price perishables
-by considering multiple internal(timeuntilexpiry,quantityleft,currentPrice) and external factors(weather,dayoftheweek,holidays).
-The system works alongside a MySQL database, where hourly(minutes,second,etc..) triggers made from the Laravel's task scheduling will connect to the Flask's RESTful API which
-will execute a process for the trained model to set new prices on the available perishable in the database.
+by considering multiple internal(timeuntilexpiry,quantityleft,currentPrice) and external factors(weather,dayoftheweek,holidays). The model also uses a OpenWeatherMap API to retrieve a location's weather code.
+The system works alongside a MySQL database, where hourly(minutes,second,etc..) triggers made from the Laravel's task scheduling will connect to the Flask's RESTful API which will execute a process for the trained model to set new prices on the available perishable in the database.
+
