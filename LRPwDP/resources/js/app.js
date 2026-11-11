@@ -1,0 +1,1 @@
+import './bootstrap'; // default Laravel bootstrap
