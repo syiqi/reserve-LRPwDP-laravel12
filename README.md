@@ -1,13 +1,13 @@
-[![Contributors](https://img.shields.io/github/contributors/YOUR_USERNAME/YOUR_REPO_NAME.svg?style=for-the-badge)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/YOUR_USERNAME/YOUR_REPO_NAME.svg?style=for-the-badge)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/network/members)
-[![Stargazers](https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO_NAME.svg?style=for-the-badge)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/stargazers)
-[![Issues](https://img.shields.io/github/issues/YOUR_USERNAME/YOUR_REPO_NAME.svg?style=for-the-badge)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/issues)
-[![MIT License](https://img.shields.io/github/license/YOUR_USERNAME/YOUR_REPO_NAME.svg?style=for-the-badge)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/network/members)
+[![Stargazers](https://img.shields.io/github/stars/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/stargazers)
+[![Issues](https://img.shields.io/github/issues/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/issues)
+[![MIT License](https://img.shields.io/github/license/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/blob/main/LICENSE)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/your_username/reserve">
+  <a href="https://github.com/syiqi/reserve">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -16,14 +16,14 @@
   <p align="center">
     A dual-component platform featuring a Laravel web application for perishable reservations and a Deep Reinforcement Learning (PPO) model for automated dynamic pricing.
     <br />
-    <a href="https://github.com/your_username/reserve"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/syiqi/reserve"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/your_username/reserve">View Demo</a>
+    <a href="https://github.com/syiqi/reserve">View Demo</a>
     ·
-    <a href="https://github.com/your_username/reserve/issues">Report Bug</a>
+    <a href="https://github.com/syiqi/reserve/issues">Report Bug</a>
     ·
-    <a href="https://github.com/your_username/reserve/issues">Request Feature</a>
+    <a href="https://github.com/syiqi/reserve/issues">Request Feature</a>
   </p>
 </div>
 
@@ -68,11 +68,11 @@ The system operates via two core integrated modules:
 
 ### Built With
 
-* [![PHP][PHP.net]][PHP-url]
-* [![Laravel][Laravel.com]][Laravel-url]
+* [![PHP][PHP.org]][PHP-url]
+* [![Laravel][Laravel.org]][Laravel-url]
 * [![Python][Python.org]][Python-url]
-* [![Flask][Flask.palletsprojects.com]][Flask-url]
-* [![MySQL][MySQL.com]][MySQL-url]
+* [![Flask][Flask.org]][Flask-url]
+* [![MySQL][MySQL.org]][MySQL-url]
 
 ---
 
@@ -80,18 +80,8 @@ The system operates via two core integrated modules:
 
 
 ```
+<img src="images/system_architecture.png" alt="System Architecture" width="80" height="80">
 
-+-----------------------------------+       Hourly Trigger       +-----------------------------------+
-|          Laravel Web App          | -------------------------> |         Flask RESTful API         |
-|         (LRPwDP / MySQL)          |                            |        (DRL PPO Model Engine)     |
-+-----------------------------------+                            +-----------------------------------+
-^                                                                 |
-| Updates Price                                                   | Fetches Weather
-+-----------------------------------------------------------------+-----------------+
-v
-+-----------------------------------+
-|       OpenWeatherMap API          |
-+-----------------------------------+
 
 ```
 
@@ -126,7 +116,7 @@ To get a local copy up and running, follow these instructions for both the Larav
 
 #### 1. Clone the repository
 ```sh
-git clone [https://github.com/your_username/reserve.git](https://github.com/your_username/reserve.git)
+git clone [https://github.com/syiqi/reserve-LRPwDP-laravel12.git](https://github.com/syiqi/reserve-LRPwDP-laravel12.git)
 cd reserve
 
 ```
@@ -194,8 +184,6 @@ php artisan schedule:work
 * [x] Integration of DRL PPO model with Gymnasium & Stable-Baselines3
 * [x] OpenWeatherMap API and external factor integration
 * [x] Automated hourly cron triggers between Laravel and Flask
-* [ ] Advanced analytics dashboard for sellers
-* [ ] Push notifications for price drops and expiring items
 
 ---
 
@@ -219,9 +207,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
+Abdul Syamir Iqmal - [@LinkedIn](https://www.linkedin.com/in/abdul-syamir-iqmal/) - abdul.syamir.iqmal@gmail.com
 
-Project Link: [https://github.com/your_username/reserve](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/your_username/reserve)
+Project Link: [https://github.com/syiqi/reserve-LRPwDP-laravel12](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/syiqi/reserve-LRPwDP-laravel12)
 
 ---
 
@@ -229,20 +217,27 @@ Project Link: [https://github.com/your_username/reserve](https://www.google.com/
 
 ```
 
-[Node.js]: https://img.shields.io/badge/Node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white
-[Node-url]: https://nodejs.org/
-
 [Python.org]: https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://www.python.org/
 
-[TailwindCSS.com]: https://img.shields.io/badge/Tailwind_CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[PHP.org]: https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white
+[PHP-url]: https://www.php.net/
+
+[Laravel.org]: https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel-url]: https://laravel.com/
+
+[MySQL.org]: https://img.shields.io/badge/mysql-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white
+[MySQL-url]: https://www.mysql.com/
+
+[Flask.org]: https://img.shields.io/badge/flask-%23000000.svg?style=for-the-badge&logo=flask&logoColor=white
+[Flask-url]: https://flask.palletsprojects.com/
+
+[Tailwind.org]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
 
-[TypeScript.js]: https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
-[TypeScript-url]: https://www.typescriptlang.org/
+[Node.org]: https://img.shields.io/badge/node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white
+[Node-url]: https://nodejs.org/
 
-[Docker.com]: https://img.shields.io/badge/Docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white
-[Docker-url]: https://www.docker.com/
 <h1>RESERVE: LEFTOVER RESERVATION PLATFORM WITH DYNAMIC PRICING</h1>
 LRPwDP files houses the laravel web application which is used as the reservation platform for sellers to list the perishables and customers to reserve them.
 <br>DRL_PPO_Model files contains the Deep Reinforcement's Proximity Policy Optimization machine learning model which is used to dynamically price perishables by considering multiple internal(timeuntilexpiry,quantityleft,currentPrice) and external factors(weather,dayoftheweek,holidays). <br>The model also uses a OpenWeatherMap API to retrieve a location's weather code.
