@@ -8,7 +8,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/syiqi/reserve">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="LRPwDP/public/favicon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">RESERVE: Leftover Reservation Platform with Dynamic Pricing</h3>
@@ -79,11 +79,11 @@ The system operates via two core integrated modules:
 ## Architecture
 
 
-```
-<img src="images/system_architecture.png" alt="System Architecture" width="80" height="80">
+
+<img src="https://media.licdn.com/dms/image/v2/D562DAQF4NKKG9XCfVA/profile-treasury-image-shrink_8192_8192/B56aBQvRJqJ4AQ-/0/1788060963686?e=1795442400&v=beta&t=jhR1QHbdltKQZ4EmzM9cBL8hmfWMTVBTTcvYet6CUko" alt="System Architecture">
 
 
-```
+
 
 The system works alongside a MySQL database where automated hourly triggers managed by Laravel's task scheduler connect to the Flask RESTful API. The API executes the trained DRL PPO model to recalculate and update optimal prices for available perishables in real time.
 
