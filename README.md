@@ -1,7 +1,6 @@
 [![Contributors](https://img.shields.io/github/contributors/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/graphs/contributors)
 [![Forks](https://img.shields.io/github/forks/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/network/members)
 [![Stargazers](https://img.shields.io/github/stars/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/stargazers)
-[![Issues](https://img.shields.io/github/issues/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/issues)
 [![MIT License](https://img.shields.io/github/license/syiqi/reserve-LRPwDP-laravel12.svg?style=for-the-badge)](https://github.com/syiqi/reserve-LRPwDP-laravel12/blob/main/LICENSE)
 
 <!-- PROJECT LOGO -->
@@ -16,14 +15,12 @@
   <p align="center">
     A dual-component platform featuring a Laravel web application for perishable reservations and a Deep Reinforcement Learning (PPO) model for automated dynamic pricing.
     <br />
-    <a href="https://github.com/syiqi/reserve"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/syiqi/reserve"><strong>Explore the docs (N/A) »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/syiqi/reserve">View Demo</a>
+    <a href="https://github.com/syiqi/reserve">View Demo (N/A)</a>
     ·
-    <a href="https://github.com/syiqi/reserve/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/syiqi/reserve/issues">Request Feature</a>
+    <a href="mailto:abdul.syamir.iqmal@gmail.com">Report Bug</a>
   </p>
 </div>
 
@@ -50,7 +47,6 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -110,14 +106,14 @@ To get a local copy up and running, follow these instructions for both the Larav
 * **PHP** >= 8.2 and Composer
 * **Python** >= 3.10
 * **MySQL** Server
-* Node.js & NPM (for frontend assets if applicable)
+* Node.js & NPM (for frontend assets)
 
 ### Installation
 
 #### 1. Clone the repository
 ```sh
 git clone [https://github.com/syiqi/reserve-LRPwDP-laravel12.git](https://github.com/syiqi/reserve-LRPwDP-laravel12.git)
-cd reserve
+cd reserve-LRPwDP-laravel12
 
 ```
 
@@ -187,18 +183,6 @@ php artisan schedule:work
 
 ---
 
-## Contributing
-
-Contributions are what make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
@@ -238,33 +222,5 @@ Project Link: [https://github.com/syiqi/reserve-LRPwDP-laravel12](https://www.go
 [Node.org]: https://img.shields.io/badge/node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white
 [Node-url]: https://nodejs.org/
 
-<h1>RESERVE: LEFTOVER RESERVATION PLATFORM WITH DYNAMIC PRICING</h1>
-LRPwDP files houses the laravel web application which is used as the reservation platform for sellers to list the perishables and customers to reserve them.
-<br>DRL_PPO_Model files contains the Deep Reinforcement's Proximity Policy Optimization machine learning model which is used to dynamically price perishables by considering multiple internal(timeuntilexpiry,quantityleft,currentPrice) and external factors(weather,dayoftheweek,holidays). <br>The model also uses a OpenWeatherMap API to retrieve a location's weather code.
-<br>The system works alongside a MySQL database, where hourly(minutes,second,etc..) triggers made from the Laravel's task scheduling will connect to the Flask's RESTful API which will execute a process for the trained model to set new prices on the available perishable in the database.
-
-<h1>FEATURES</h1>
-<h1>ARCHITECTURE</h1>
-<h1>TECH STACK</h1>
-
-Web Application:-
-"php": "^8.2",
-"laravel/framework": "^12.0",
-and more in LRPwDP\composer.json file
-
-Dynamic Pricing Model:-
-Flask==3.1.2
-gym==0.26.2
-gymnasium==1.2.0
-holidays==0.79
-matplotlib==3.10.5
-numpy==2.2.6
-opencv-python==4.12.0.88
-openpyxl==3.1.5
-pandas==2.3.2
-python-dotenv==1.1.1
-scikit-learn==1.7.1
-stable_baselines3==2.7.0
-and more in DRL_PPO_Model\requirement.txt
 
 Here is a production-ready GitHub README.md template designed to follow best practices for open-source and professional projects.
