@@ -185,7 +185,7 @@ php artisan schedule:work
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
@@ -196,10 +196,6 @@ Abdul Syamir Iqmal - [@LinkedIn](https://www.linkedin.com/in/abdul-syamir-iqmal/
 Project Link: [https://github.com/syiqi/reserve-LRPwDP-laravel12](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/syiqi/reserve-LRPwDP-laravel12)
 
 ---
-
-```
-
-```
 
 [Python.org]: https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://www.python.org/
@@ -222,5 +218,3 @@ Project Link: [https://github.com/syiqi/reserve-LRPwDP-laravel12](https://www.go
 [Node.org]: https://img.shields.io/badge/node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white
 [Node-url]: https://nodejs.org/
 
-
-Here is a production-ready GitHub README.md template designed to follow best practices for open-source and professional projects.
