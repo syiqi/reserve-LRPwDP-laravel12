@@ -98,78 +98,157 @@ The system works alongside a MySQL database where automated hourly triggers mana
 
 ## Getting Started
 
-To get a local copy up and running, follow these instructions for both the Laravel application and the Python Flask model backend.
+RESERVE has two main components that run separately:
+
+- **Laravel web application:** `LRPwDP`
+- **DRL PPO pricing API:** `DRL_PPO_Model`
 
 ### Prerequisites
 
-* **PHP** >= 8.2 and Composer
-* **Python** >= 3.10
-* **MySQL** Server
-* Node.js & NPM (for frontend assets)
+- PHP 8.2+
+- Composer
+- Python 3.10+
+- pip
+- MySQL
+- Node.js and npm
+- Git
 
-### Installation
+### 1. Clone the repository
 
-#### 1. Clone the repository
-```sh
-git clone [https://github.com/syiqi/reserve-LRPwDP-laravel12.git](https://github.com/syiqi/reserve-LRPwDP-laravel12.git)
+```bash
+git clone https://github.com/syiqi/reserve-LRPwDP-laravel12.git
 cd reserve-LRPwDP-laravel12
-
 ```
 
-#### 2. Set up the Laravel Web Application (`LRPwDP`)
+### 2. Set up the DRL PPO model
 
-```sh
+Open the Python project:
+
+```bash
+cd DRL_PPO_Model
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+```bash
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirement.txt
+```
+
+Configure the required API keys and model settings, particularly the **OpenWeatherMap API key** used for weather-based pricing.
+
+Start the Flask API:
+
+```bash
+python app.py
+```
+
+The API normally runs at:
+
+```text
+http://localhost:5000
+```
+
+You can test the price endpoint:
+
+```bash
+curl -X POST http://localhost:5000/predict-price \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Price": 15.0,
+    "OriginalPrice": 20.0,
+    "LowerBound": 10.0,
+    "ExpiryHours": 72,
+    "Quantity": 30,
+    "TotalQuantity": 100
+  }'
+```
+
+### 3. Set up the Laravel web application
+
+Open another terminal from the repository root:
+
+```bash
 cd LRPwDP
 composer install
+```
+
+Create the environment configuration:
+
+```bash
+# macOS/Linux
 cp .env.example .env
+
+# Windows
+copy .env.example .env
+```
+
+Configure `LRPwDP/.env` with your MySQL database credentials:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=reserve
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Generate the application key and initialize the database:
+
+```bash
 php artisan key:generate
 php artisan migrate
 php artisan db:seed
-
 ```
 
-#### 3. Set up the DRL Pricing Model (`DRL_PPO_Model`)
+Install and build the frontend assets:
 
-Open a new terminal session for the Python backend:
-
-```sh
-cd DRL_PPO_Model
-python -m venv venv
-# On Windows use: venv\Scripts\activate
-# On macOS/Linux use: source venv/bin/activate
-pip install -r requirement.txt
-
+```bash
+npm install
+npm run build
 ```
 
-#### 4. Configure Environment Variables
+Start Laravel:
 
-* Configure your database credentials inside `LRPwDP/.env`.
-* Set up your OpenWeatherMap API key inside `DRL_PPO_Model` configuration or `.env` file (`python-dotenv` is included).
-
-#### 5. Run the Application
-
-Start the Flask model server:
-
-```sh
-cd DRL_PPO_Model
-python app.py
-
-```
-
-Start the Laravel development server (in another terminal):
-
-```sh
-cd LRPwDP
+```bash
 php artisan serve
-
 ```
 
-Ensure your Laravel task scheduler is running to execute automated price updates:
+The web application is available at:
 
-```sh
+```text
+http://127.0.0.1:8000
+```
+
+### 4. Start automated dynamic pricing
+
+With Flask and Laravel running, open another terminal:
+
+```bash
+cd LRPwDP
 php artisan schedule:work
-
 ```
+
+This enables Laravel to trigger scheduled pricing updates through the Flask API.
+
+### Verify the installation
+
+- Laravel loads at `http://127.0.0.1:8000`
+- Flask is reachable at `http://localhost:5000`
+- `DB_*` values in `LRPwDP/.env` are valid
+- The Flask pricing endpoint accepts requests
+- The Laravel scheduler is running
 
 ---
 
