@@ -75,7 +75,7 @@ The system operates via two core integrated modules:
 
 
 
-<img src="https://media.licdn.com/dms/image/v2/D562DAQF4NKKG9XCfVA/profile-treasury-image-shrink_8192_8192/B56aBQvRJqJ4AQ-/0/1788060963686?e=1795442400&v=beta&t=jhR1QHbdltKQZ4EmzM9cBL8hmfWMTVBTTcvYet6CUko" alt="System Architecture">
+<img src="SysArc.jpeg" alt="System Architecture">
 
 
 
