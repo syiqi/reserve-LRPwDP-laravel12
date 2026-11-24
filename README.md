@@ -75,7 +75,7 @@ The system operates via two core integrated modules:
 
 
 
-<img src="SysArc.jpeg" alt="System Architecture">
+<img src="SysArc.jpg" alt="System Architecture">
 
 
 
